@@ -5,11 +5,29 @@ LeBauer 2013 analysis
 
 ```{r}
 
+require("PEcAn.DB")
+require("PEcAn.ED")
+require("PEcAn.MA")
+require("PEcAn.uncertainty")
+require("PEcAn.utils") 
+
+
+settings <- read.settings('pavi.xml')
+
+model <- "ED2"
+
+get.trait.data()
+run.meta.analysis()
+
+run.write.configs(model)
+clear.scratch(settings) 
+start.model.runs(model)
+
 ```
 
 You can also embed plots, for example:
 
 ```{r fig.width=7, fig.height=6}
-plot(cars)
+
 ```
 

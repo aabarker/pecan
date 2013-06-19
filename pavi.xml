@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <pecan>
+  <pecanDir>$HOME/R-dev/pecan/</pecanDir>
+  <outdir>$HOME/out/ebifarm/fast/</outdir>
   <pfts>
     <pft>
       <name>ebifarm.pavi</name>
-      <outdir>~/out/ebifarm/fast/</outdir>
-      <edin>~/in/ebifarm/ed2in-template-pavi</edin>
+      <outdir>$HOME/out/ebifarm/fast/</outdir>
       <constants>
         <num>15</num>
         <phenology>2</phenology>
@@ -20,6 +21,36 @@
     </pft>
   </pfts>
   
+
+  
+  <meta.analysis>
+    <iter>100</iter>
+    <random.effects>FALSE</random.effects>
+  </meta.analysis>
+  
+  <ensemble>
+    <size>1</size>
+  </ensemble>
+  
+ <ensemble>
+  <size>1</size>
+ </ensemble>
+  <model>
+  <name>ED2</name>
+<binary>/home/dlebauer/EDBRAMS/ED/build/ed_2.1-opt</binary>
+<edin>/home/dlebauer/doe_vd/runs/ebifarm.pavi/ED2IN.r46</edin>
+
+  <id>7</id>
+
+   <radiation>
+    <lai_min>0.01</lai_min>
+   </radiation>
+    <phenol.scheme>0</phenol.scheme>
+    <psscss>/home/dlebauer/doe_vd/sites/ebifarm/ebifarm.</psscss>
+    <veg>/home/mdietze/data/oge2OLD/OGE2_</veg>
+    <soil>/home/mdietze/data/faoOLD/FAO_</soil>
+    <inputs>/home/mdietze/data/ed_inputs/</inputs>
+
   <config.header>
     <radiation>
       <lai_min>0.01</lai_min>
@@ -28,26 +59,11 @@
       <output_month>12</output_month>      
     </ed_misc> 
   </config.header>
-  
-  <meta.analysis>
-    <iter>10000</iter>
-    <random.effects>TRUE</random.effects>
-  </meta.analysis>
-  
-  <ensemble>
-    <size>1</size>
-  </ensemble>
-  
-<sensitivity.analysis>
-    <start.year>1995</start.year>
-    <end.year>2006</end.year>
-<!--    <quantiles>
-      <quantile>0.65</quantile> 
-    </quantiles>-->
-  </sensitivity.analysis>
+
+  </model>
       
-  <pecanDir>~/pecan/</pecanDir>
-  <outdir>~/out/ebifarm/fast/</outdir>
+
+  <outdir>/home/dlebauer/out/ebifarm/fast/</outdir>
   <database>
     <userid>bety</userid>
     <passwd>bety</passwd>
@@ -56,9 +72,10 @@
   </database>
   <run>
     <site>
+      <id>76</id>
       <name>EBI Energy Farm - Switchgrass</name>
-      <lat></lat>
-      <lon></lon>
+      <lat>40.00</lat>
+      <lon>-88.23</lon>
       <met.data.header></met.data.header>
     </site>
     <start.date>1996/01/01</start.date>
