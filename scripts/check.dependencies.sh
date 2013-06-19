@@ -60,6 +60,6 @@ if(length(new.packages)) {
 } 
 if(biocro){
    devtools::install_github('BioCro', 'dlebauer')
-} " | R --vanilla
+} | R --vanilla "
 EOF
 fi
